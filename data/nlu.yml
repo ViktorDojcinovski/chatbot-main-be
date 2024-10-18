@@ -1,0 +1,292 @@
+version: "3.1"
+nlu:
+  - intent: greet
+    examples: |
+      - hey
+      - hello
+      - hi
+      - hello there
+      - good morning
+      - good evening
+      - good day
+      - good afternoon
+      - moin
+      - hey there
+      - let's go
+      - hey dude
+      - goodmorning
+      - goodevening
+      - goodday
+      - goodafternoon
+      - Hey
+      - Hi
+      - Hello
+  - intent: choose_vehicle_type
+    examples: |
+      - [car](vehicle_type)
+      - [sedan](vehicle_type)
+      - [hatchback](vehicle_type)
+      - [coupe](vehicle_type)
+      - [convertible](vehicle_type)
+      - [SUV](vehicle_type)
+      - [crossover](vehicle_type)
+      - [minivan](vehicle_type)
+      - [light car](vehicle_type)
+      - [jeep/pickup](vehicle_type)
+      - [van](vehicle_type)
+      - [truck](vehicle_type)
+      - I need tires for my [car](vehicle_type) .
+      - Need tires for [jeep/pickup](vehicle_type).
+      - I have [hatchback](vehicle_type), what tires do you suggest?
+      - Interested in tires for [SUV](vehicle_type).
+      - Tires for [car](vehicle_type).
+      - Looking for tires for [light car](vehicle_type).
+      - I want to buy tires for [van](vehicle_type).
+      - Please suggest tires for [truck](vehicle_type)?
+      - I need tires [light car](vehicle_type).
+      - What type of tires do you suggest [jeep/pickup](vehicle_type)?
+      - I want to buy tires for [van](vehicle_type).
+      - I plan to chnage my tires on my [truck](vehicle_type).
+      - I need new tires for the [crossover](vehicle_type).
+      - What tires do you recomend for [jeep/pickup](vehicle_type)?
+      - I am interested in winter tires for a [van](vehicle_type).
+      - Do you offer tires for [truck](vehicle_type)?
+      - I am interested in tires for [car](vehicle_type) for better handling.
+      - Do you have eco tires [jeep/pickup](vehicle_type)?
+      - Are there tires for [minivan](vehicle_type) in stock?
+      - I need tires with increased grip for [truck](vehicle_type).
+      - [van](vehicle_type)
+      - [track](vehicle_type)
+      - Need [car](vehicle_type) tires.
+      - Tires, I need for [jeep/pickup](vehicle_type).
+      - I have [sedan](vehicle_type), what do you suggest?
+      - I am interested in tires for my [truck](vehicle_type).
+      - Tires for [car](vehicle_type).
+      - Looking for [jeep/pickup](vehicle_type) tires.
+      - I'd like to buy [cabriolet](vehicle_type) tires.
+      - Will you recommend me tires for a [truck](vehicle_type)?
+      - I would be needing tires for [car](vehicle_type).
+      - Which tires would you suggest [jeep/pickup](vehicle_type)?
+      - Need special tires for a [van](vehicle_type).
+      - I plan to change my tires on my [truck](vehicle_type).
+      - New tires for [car](vehicle_type).
+      - What do you suggest for [jeep/pickup](vehicle_type)?
+      - Winter tires for a [van](vehicle_type).
+      - Summer tires for a [truck](vehicle_type)?
+      - I need tires for a [car](vehicle_type) to improve the handling.
+      - Are there any eco tires for [jeep/pickup](vehicle_type)?
+      - Stock of tires for [van](vehicle_type)?
+      - I am looking for tires with a better grip for [truck](vehicle_type).
+      - [Truck](vehicle_type)
+      - [Juggernaut](vehicle_type)
+      - [Tipper](vehicle_type)
+      - [Lorry](vehicle_type)
+      - [Dumper](vehicle_type)
+      - [Heavy vehicle](vehicle_type)
+      - [Jeep](vehicle_type)
+      - [Bogie](vehicle_type)
+      - [SUV](vehicle_type)
+      - [Kola](vehicle_type)
+      - [Automobile](vehicle_type)
+      - [Transporter](vehicle_type)
+      - [car]{"entity": "vehicle_type", "value": "Car"}
+      - [jeep]{"entity": "vehicle_type", "value": "Jeep"}
+  - intent: choose_stock
+    examples: |
+      - [1](stock)
+      - [2](stock)
+      - [3](stock)
+      - [4](stock)
+      - [5](stock)
+      - [6](stock)
+      - [7](stock)
+      - I need [4](stock) tires
+      - I am looking for [1](stock) tires
+      - I want to buy [2](stock) tires
+      - I am in need for [3](stock) tires
+      - I would like to buy [4](stock) tires
+      - I have to buy [5](stock) tires
+      - I am in urge for [6](stock) tires
+      - Do you have [7](stock) tires in stock?
+      - Can I have [8](stock) tires?
+      - [9](stock) tires
+      - Will need [10](stock) tires
+      - [1](stock)
+  - intent: choose_type
+    examples: |
+      - [Summer season](type)
+      - [Winter season](type)
+      - [Summer](type) tires
+      - [Winter](type) tires
+      - I want [summer season](type) tires
+      - I would like [winter season](type) tires
+      - I want [summer](type)
+      - Need [winter](type) tires
+      - I need an offer for [winter season](type) tires
+      - Give me an offer for [summer](type) tires
+      - Provide me with offer for [winter](type) tires
+      - An offer please for [summer season](type) tires
+      - [All season](type)
+      - [4 seasons](type) tires
+      - [Winter season](type) гуми
+      - Would like [summer](type) tires
+      - Would like to buy [winter](type) tires
+      - Give me an offer for [winter](type) tires
+      - I would prefer [summer](type) tires.
+      - I'd prefer [winter](type) tires.
+      - I am interested in [summer season](type) tires.
+      - I'm interested for [winter season](type) tires.
+      - I plan to buy [summer](type) tires.
+      - I'd like to buy [winter](type) tires.
+      - [All season](type) would be suitable.
+      - [All season](type) will fit well.
+      - For this winter I need [winter](type) tires.
+      - For the summer I prefer [summer](type) tires.
+      - [Summer season](type) for the summer season.
+      - [Winter season](type) for this winter.
+      - I need [all season](type) tires for any circumstances.
+      - Give me [summer](type) tires.
+      - I need an information for [winter](type) tires.
+      - [Summer](type) are the best fit for the hot weather.
+      - [Winter season](type) would be the best choice for the cold weather.
+      - [Summer season](type)
+      - [summer]{"entity": "type", "value": "summer"}
+  - intent: choose_size
+    examples: |
+      - [225/40/R15](size)
+      - [225/45/18](size)
+      - Dimensions [225/45/R18](size)
+      - Dimensions are [225/45/R18](size)
+      - Tires have to be [225/50/R17](size)
+      - I would like [230/45/R17](size)
+      - [245/45/R20](size) for my car
+      - [255/55/R18](size) would fit
+      - I need tires with dimensions [300/30/R19](size)
+      - Tires have to be [225/50/R17](size)
+      - Tires with dimensions [230/45/R17](size)
+      - I am interested in [245/45/R20](size)
+      - [255/55/R18](size) would be suitable
+      - [210/55/R16](size)
+      - [220/50/R17](size)
+      - [23045R18](size)
+      - [24040Р18](size)
+      - [250/45/R19](size)
+      - [260/50/R20](size)
+      - [2704521](size)
+      - [280/40/R22](size)
+      - [290/35/R23](size)
+      - [295/30/R24](size)
+      - [225.45.18](size)
+      - [255,45,20](size)
+      - [225 45R18](size)
+      - [225 45 18](size)
+      - [245 35 22](size)
+      - [225 45 R18](size)
+      - [265 45 r18](size)
+      - [185 35 Р16](size)
+  - intent: bot_challenge
+    examples: |
+      - are you a bot?
+      - are you a human?
+      - am I talking to a bot?
+      - am I talking to a human?
+  - intent: complete_order_request
+    examples: |
+      - I need [225/45/R18](size) [summer season](type) tires for the [car](vehicle_type).
+      - I want to buy [255/55/18](size) [winter season](type) tires for the [jeep/pickup](vehicle_type)?
+      - Do you have [215 60 16](size) [all season](type) tires for [van](vehicle_type)?
+      - I am looking for [265 70R17](size) [summer](type) tires for a [truck](vehicle_type).
+      - How much does it cost [225/45/R18](size) [summer](type) tires for [SUV](vehicle_type)?
+      - What is the price of [255/55/R18](size) [winter](type) tires for [cabriolet](vehicle_type)?
+      - What's the price of [215/60/R16](size) [all season](type) tires for [crossover](vehicle_type)?
+      - What would be the price of [265/70/R17](size) [summer](type) tires for a [truck](vehicle_type)?
+      - Please suggest [225/45/R18](size) [summer season](type) tires for [van](vehicle_type)?
+      - Which [255.55.18](size) [winter season](type) tires are recommended for a [jeep](vehicle_type)?
+      - What [215/60/Р16](size) tires would be best as [all season](type) for [van](vehicle_type)?
+      - Which [265/70/р17](size) [summer season](type) tires would you suggest for [truck](vehicle_type)?
+      - Do yoou have [225/45/е18](size) [summer season](type) tires for [jeep](vehicle_type) and what is the price?
+      - Can I get an offer for [255 55 r18](size) [winter](type) tires for a [jeep](vehicle_type) and the price please?
+      - Do you have [215.60.R16](size) [all season](type) tires for [van](vehicle_type) and what would be the price?
+      - Are there [265/70/R17](size) [summer season](type) tires for [truck](vehicle_type) available?
+      - Will you please give me an info on [255/55/18](size) [winter](type) tires?
+      - Give me information for [215 60 16](size) [all season](type) tires for a [crossover](vehicle_type)?
+      - How much is the cost for [225/45/R18](size) [summer season](type) tires for [car](vehicle_type)?
+      - Would you please recommend [225/45/R18](size) [summer season](type) tires for a [SUV](vehicle_type)?
+      - [255/55/R18](size) [winter season](type) tires for [SUV](vehicle_type)?
+      - Available [215/60/R16](size) [all season](type) tires that would fit best for a [van](vehicle_type)?
+  - intent: incomplete_st
+    examples: |
+      - Do you have [225/45/R18](size) [summmer season](type) tires?
+      - How much are [225/45/R18](size) [winter season](type) tires?
+      - I need [225/45/R18](size) [summer](type) tires.
+      - Do you have in stock [225/45/R18](size) [all season](type) tires?
+      - I am looking for [225/45/R18](size) [summer season](type) tires.
+      - Would you tell me please if you have [225/45/R18](size) [summer](type) tires?
+      - What is the price of [225/45/R18](size) [summer](type) tires?
+      - What would be the price of [225/45/R18](size) [winter](type) tires?
+      - Give me an offer for [225/45/R18](size) [all season](type) tires.
+      - Suggest [225/45/R18](size) [summer season](type) tires?
+      - Would you be that kind to tell me if you have [215/55/R16](size) [summer](type) tires?
+      - How much does it cost a set of [215/55/R16](size) [winter season](type) tires?
+      - I need a set of [215/55/R16](size) [summer](type) tires.
+      - I urgently need [215/55/R16](size) [summer season](type) tires.
+      - Will you please offer [215/55/R16](size) [winter](type) tires?
+      - [205/60/r16](size) [summer season](type) tires
+      - Please do you have [205 60R16](size) [all season](type) tires?
+      - Tires with dimensions [205.60.R16](size) for [winter season](type)
+      - I need [winter]{"entity": "type", "value": "Winter"} tires with dimensions [225/45/18](size)
+  - intent: incomplete_sv
+    examples: |
+      - Do you have [225/45/R18](size) tires for a [car](vehicle_type)?
+      - What is the price of [225/45/R18](size) tires for [cabriolet](vehicle_type)?
+      - I need [225/45/R18](size) tires for [SUV](vehicle_type).
+      - I am looking for [225/45/R18](size) tires for a [van](vehicle_type).
+      - Can you tell me please if you have [225/45/R18](size) tires for [van](vehicle_type)?
+      - I'd like to ask do you have [225/45/R18](size) tires for a [jeep](vehicle_type)?
+      - I would be needing a set of [225/45/R18](size) tires for a [truck](vehicle_type).
+      - Can you please suggest [225/45/R18](size) tires for a  [crossover](vehicle_type)?
+      - I will be needing [215/55/R16](size) tires for a [lorry](vehicle_type)?
+      - What would be the price of [215/55/R16](size) set of tires for [truck](vehicle_type)?
+      - I need tires [215/55/R16](size) that will fit on [SUV](vehicle_type).
+      - Are there [215/55/R16](size) tires for [truck](vehicle_type) in stock?
+      - Looking for [215/55/R16](size) tires.
+      - [225 45 18](size) set of tires for my [car](vehicle_type)?
+      - How much does it cost a set of [225.45.18](size) tires for a [SUV](vehicle_type)?
+      - I look for [225 45 р18](size) tires for a [track](vehicle_type).
+      - Will you please suggest me [225/45/R18](size) tires for a [cabriolet](vehicle_type)?
+  - intent: incomplete_tv
+    examples: |
+      - Do you have [summer season](type) tires for a [SUV](vehicle_type)?
+      - What is the price of [winter season](type) tires for a [car](vehicle_type)?
+      - I need [summer](type) tires for a [sedan](vehicle_type).
+      - Please give me an offer for [all season](type) tires for a [van](vehicle_type)?
+      - I am looking for a [summer season](type) set of tires for a [hatchback](vehicle_type).
+      - Can you tell me if you have [summer](type) tyres for a [truck](vehicle_type) in stock?
+      - How much doe it cost a set of [summer season](type) tires for a [SUV](vehicle_type)?
+      - Do you have any [winter season](type) tires for my [jeep/pickup](vehicle_type)?
+      - I'm interested in [all season](type) tires for a [car](vehicle_type).
+      - Will you suggest [summer season](type) tires for a [van](vehicle_type)?
+  - synonym: Car
+    examples: |
+      - car
+  - synonym: Summer
+    examples: |
+      - summer
+
+  - intent: neznam
+    examples: |
+      - Do not know
+      - I do not know
+      - I have no idea
+      - I don't know the size
+      - I have no idea about the size
+      - Have no clue about the size
+      - I am not sure about the size
+
+  - intent: choose_to_get_size
+    examples: |
+      - [Toyota](maker), [Corolla](model), [2020](year)
+      - I have [Toyota](maker) [Corolla](model) [2020](year)
+      - I drive [Honda](maker), [Civic](model), [2019](year)
+      - I own [Honda](maker) [Civic](model) [2019](year)
+      - I have [Volkswagen](maker) [Golf](model) [2018](year)

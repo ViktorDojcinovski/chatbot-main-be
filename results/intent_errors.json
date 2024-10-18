@@ -1,0 +1,10 @@
+[
+  {
+    "text": "How much are your Michelin tires?",
+    "intent": "ask_brand_only",
+    "intent_prediction": {
+      "name": "ask_type_brand",
+      "confidence": 0.5918582677841187
+    }
+  }
+]

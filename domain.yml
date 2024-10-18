@@ -1,0 +1,101 @@
+version: '3.1'
+intents:
+- bot_challenge
+- choose_size
+- choose_stock
+- choose_type
+- choose_vehicle_type
+- complete_order_request
+- greet
+- incomplete_order_request
+- incomplete_st
+- incomplete_sv
+- incomplete_tv
+- neznam
+- choose_to_get_size
+entities:
+- stock
+- size
+- type
+- vehicle_type
+- brand
+- maker
+- model
+- year
+slots:
+  brand:
+    type: text
+    influence_conversation: true
+    mappings:
+    - type: from_entity
+      entity: brand
+  size:
+    type: text
+    influence_conversation: true
+    mappings:
+    - type: from_entity
+      entity: size
+  type:
+    type: text
+    influence_conversation: true
+    mappings:
+    - type: from_entity
+      entity: type
+  vehicle_type:
+    type: text
+    influence_conversation: true
+    mappings:
+    - type: from_entity
+      entity: vehicle_type
+  stock:
+    type: text
+    influence_conversation: true
+    mappings:
+    - type: from_entity
+      entity: stock
+  maker:
+    type: text
+    influence_conversation: true
+    mappings:
+    - type: from_entity
+      entity: maker
+  model:
+    type: text
+    influence_conversation: true
+    mappings:
+    - type: from_entity
+      entity: model
+  year:
+    type: text
+    influence_conversation: true
+    mappings:
+    - type: from_entity
+      entity: year
+
+responses:
+  utter_neznam:
+    - text: За да ви помогнам да најдете соодветни гуми, ве молам кажете ми mарка, модел и година на вашиот автомобил (на пример, Toyota Corolla 2020)
+
+actions:
+- action_incomplete_st
+- action_utter_greet
+- action_testing
+- action_utter_confirm_size
+- action_utter_confirm_v_type
+- action_utter_confirm_type
+- action_hello
+- action_check_brand
+- action_check_size
+- action_check_type_size
+- action_check_type_brand
+- action_check_stock
+- action_process_purchase
+- action_afirm_order
+- action_deny_order
+- action_incomplete_sv
+- action_incomplete_tv
+- utter_neznam
+- action_neznam
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: false

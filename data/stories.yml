@@ -1,0 +1,371 @@
+version: "3.1"
+
+stories:
+  - story: The bot greets the user first and the user chooses vehicle type
+    steps:
+      - intent: greet
+      - action: action_utter_greet
+      - intent: choose_vehicle_type
+      - slot_was_set:
+          - vehicle_type: car
+      - action: action_utter_confirm_v_type
+      - intent: choose_type
+      - slot_was_set:
+          - type: winter season
+      - action: action_utter_confirm_type
+      - intent: choose_size
+      - slot_was_set:
+          - type: 210/55/R16
+      - action: action_utter_confirm_size
+      - intent: choose_stock
+        entities:
+          - size: 1
+      - slot_was_set:
+          - size: 1
+      - action: action_testing
+
+  - story: The user chooses the tires season
+    steps:
+      - intent: greet
+      - action: action_utter_greet
+      - intent: choose_vehicle_type
+      - slot_was_set:
+          - vehicle_type: car
+      - action: action_utter_confirm_v_type
+      - intent: choose_type
+      - slot_was_set:
+          - type: summer season
+      - action: action_utter_confirm_type
+      - intent: choose_size
+      - slot_was_set:
+          - type: 210/55/R22
+      - action: action_utter_confirm_size
+      - intent: choose_stock
+        entities:
+          - size: 2
+      - slot_was_set:
+          - size: 2
+      - action: action_testing
+
+  - story: The user gives the dimensions for the tires
+    steps:
+      - intent: greet
+      - action: action_utter_greet
+      - intent: choose_vehicle_type
+      - slot_was_set:
+          - vehicle_type: car
+      - action: action_utter_confirm_v_type
+      - intent: choose_type
+      - slot_was_set:
+          - type: winter season
+      - action: action_utter_confirm_type
+      - intent: choose_size
+      - slot_was_set:
+          - type: 210/55/R16
+      - action: action_utter_confirm_size
+      - intent: choose_stock
+        entities:
+          - size: 4
+      - slot_was_set:
+          - size: 4
+      - action: action_testing
+
+  - story: interactive_story_1
+    steps:
+      - intent: greet
+      - action: action_utter_greet
+      - intent: choose_vehicle_type
+        entities:
+          - vehicle_type: car
+      - slot_was_set:
+          - vehicle_type: car
+      - action: action_utter_confirm_v_type
+      - intent: choose_type
+        entities:
+          - type: summer
+      - slot_was_set:
+          - type: summer season
+      - action: action_utter_confirm_type
+      - intent: choose_size
+        entities:
+          - size: 225 45 18
+      - slot_was_set:
+          - size: 225 45 18
+      - action: action_utter_confirm_size
+      - intent: choose_stock
+        entities:
+          - size: 1
+      - slot_was_set:
+          - size: 1
+      - action: action_testing
+
+  - story: interactive_story_2
+    steps:
+      - intent: greet
+      - action: action_utter_greet
+      - intent: choose_vehicle_type
+        entities:
+          - vehicle_type: Car
+      - slot_was_set:
+          - vehicle_type: Car
+      - action: action_utter_confirm_v_type
+      - intent: choose_type
+        entities:
+          - type: Summer season
+      - slot_was_set:
+          - type: Summer season
+      - action: action_utter_confirm_type
+      - intent: choose_size
+        entities:
+          - size: 225/45/18
+      - slot_was_set:
+          - size: 225/45/18
+      - action: action_utter_confirm_size
+      - intent: choose_stock
+        entities:
+          - stock: "4"
+      - slot_was_set:
+          - stock: "4"
+      - action: action_testing
+
+  - story: The user gives full information for the tires
+    steps:
+      - intent: complete_order_request
+        entities:
+          - vehicle_type: Car
+          - type: winter season
+          - size: 225 45 18
+      - slot_was_set:
+          - vehicle_type: Car
+          - type: winter season
+          - size: 225 45 18
+      - action: action_utter_confirm_size
+      - intent: choose_stock
+        entities:
+          - stock: "8"
+      - slot_was_set:
+          - stock: "8"
+      - action: action_testing
+
+  - story: incomplete_tv
+    steps:
+      - intent: incomplete_tv
+        entities:
+          - vehicle_type: Car
+          - type: winter season
+      - slot_was_set:
+          - vehicle_type: Car
+          - type: winter
+      - action: action_incomplete_tv
+      - intent: choose_size
+      - slot_was_set:
+          - type: 210/55/R16
+      - action: action_utter_confirm_size
+      - intent: choose_stock
+        entities:
+          - size: 1
+      - slot_was_set:
+          - size: 1
+      - action: action_testing
+
+  - story: incomplete_st
+    steps:
+      - intent: incomplete_st
+        entities:
+          - type: summer season
+          - size: 225 45 18
+      - slot_was_set:
+          - type: summer season
+          - size: 225 45 18
+      - action: action_incomplete_st
+      - intent: choose_vehicle_type
+        entities:
+          - vehicle_type: Car
+      - slot_was_set:
+          - vehicle_type: Car
+      - action: action_utter_confirm_size
+      - intent: choose_stock
+        entities:
+          - size: 1
+      - slot_was_set:
+          - size: 1
+      - action: action_testing
+
+  - story: incomplete_sv______
+    steps:
+      - intent: incomplete_sv
+        entities:
+          - vehicle_type: Car
+          - size: 225/45/18
+      - slot_was_set:
+          - vehicle_type: Car
+          - size: 225/45/18
+      - action: action_incomplete_sv
+      - intent: choose_type
+        entities:
+          - type: Summer season
+      - slot_was_set:
+          - type: Summer season
+      - action: action_utter_confirm_size
+      - intent: choose_stock
+        entities:
+          - size: 1
+      - slot_was_set:
+          - size: 1
+      - action: action_testing
+
+  - story: incomplete_sv_greet
+    steps:
+      - intent: greet
+      - action: action_utter_greet
+      - intent: incomplete_sv
+        entities:
+          - vehicle_type: Car
+          - size: 225/45/18
+      - slot_was_set:
+          - vehicle_type: Car
+          - size: 225/45/18
+      - action: action_incomplete_sv
+      - intent: choose_type
+        entities:
+          - type: Summer season
+      - slot_was_set:
+          - type: Summer season
+      - action: action_utter_confirm_size
+      - intent: choose_stock
+        entities:
+          - size: 1
+      - slot_was_set:
+          - size: 1
+      - action: action_testing
+
+  - story: interactive_story_half
+    steps:
+      - intent: greet
+      - action: action_utter_greet
+      - intent: complete_order_request
+        entities:
+          - vehicle_type: Car
+          - type: winter season
+          - size: 225 45 18
+      - slot_was_set:
+          - vehicle_type: Car
+          - type: winter season
+          - size: 225 45 18
+      - action: action_utter_confirm_size
+      - intent: choose_stock
+        entities:
+          - size: 4
+      - slot_was_set:
+          - size: 4
+      - action: action_testing
+
+  - story: incomplete_tv_greet
+    steps:
+      - intent: greet
+      - action: action_utter_greet
+      - intent: incomplete_tv
+        entities:
+          - vehicle_type: Car
+          - type: winter season
+      - slot_was_set:
+          - vehicle_type: Car
+          - type: winter season
+      - action: action_incomplete_tv
+      - intent: choose_size
+      - slot_was_set:
+          - type: 210/55/R16
+      - action: action_utter_confirm_size
+      - intent: choose_stock
+        entities:
+          - size: 1
+      - slot_was_set:
+          - size: 1
+      - action: action_testing
+
+  - story: incomplete_st_greet
+    steps:
+      - intent: greet
+      - action: action_utter_greet
+      - intent: incomplete_st
+        entities:
+          - type: summer season
+          - size: 225 45 18
+      - slot_was_set:
+          - type: summer season
+          - size: 225 45 18
+      - action: action_incomplete_st
+      - intent: choose_vehicle_type
+        entities:
+          - vehicle_type: Car
+      - slot_was_set:
+          - vehicle_type: Car
+      - action: action_utter_confirm_size
+      - intent: choose_stock
+        entities:
+          - size: 1
+      - slot_was_set:
+          - size: 1
+      - action: action_testing
+
+  - story: interactive_story_1
+    steps:
+      - intent: greet
+      - action: action_utter_greet
+      - intent: incomplete_st
+        entities:
+          - type: Winter season
+          - size: 225/45/18
+      - slot_was_set:
+          - size: 225/45/18
+          - type: Winter season
+      - action: action_incomplete_st
+      - intent: choose_vehicle_type
+        entities:
+          - vehicle_type: SUV
+      - slot_was_set:
+          - vehicle_type: SUV
+      - action: action_utter_confirm_size
+      - intent: choose_stock
+        entities:
+          - stock: "1"
+      - slot_was_set:
+          - stock: "1"
+      - action: action_testing
+
+  - story: interactive_story_neznam
+    steps:
+      - intent: greet
+      - action: action_utter_greet
+      - intent: choose_vehicle_type
+        entities:
+          - vehicle_type: Car
+      - slot_was_set:
+          - vehicle_type: Car
+      - action: action_utter_confirm_v_type
+      - intent: choose_type
+        entities:
+          - type: Summer season
+      - slot_was_set:
+          - type: Summer season
+      - action: action_utter_confirm_type
+      - intent: neznam
+      - action: utter_neznam
+      - intent: choose_to_get_size
+        entities:
+          - model: Honda
+          - maker: Civic
+          - year: 2020
+      - slot_was_set:
+          - model: Honda
+          - maker: Civic
+          - year: 2020
+      - action: action_neznam
+      - slot_was_set:
+          - size: 215/50/R16
+      - intent: choose_stock
+        entities:
+          - stock: "4"
+      - slot_was_set:
+          - stock: "4"
+      - action: action_testing

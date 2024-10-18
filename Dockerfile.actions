@@ -1,0 +1,11 @@
+FROM rasa/rasa-sdk:3.6.0
+
+# Copy the actions folder and other necessary files
+COPY ./actions /app/actions
+WORKDIR /app
+
+# Expose the default actions port
+EXPOSE 5055
+
+# Command to run the custom actions server
+CMD ["rasa", "run", "actions"]

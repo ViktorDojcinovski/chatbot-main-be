@@ -1,0 +1,51 @@
+{
+  "type": {
+    "precision": 0.9625,
+    "recall": 1.0,
+    "f1-score": 0.980891719745223,
+    "support": 77,
+    "confused_with": {}
+  },
+  "size": {
+    "precision": 1.0,
+    "recall": 0.9180327868852459,
+    "f1-score": 0.9572649572649572,
+    "support": 61,
+    "confused_with": {
+      "type": 3
+    }
+  },
+  "brand": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1-score": 1.0,
+    "support": 9,
+    "confused_with": {}
+  },
+  "vehicle_type": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1-score": 1.0,
+    "support": 88,
+    "confused_with": {}
+  },
+  "micro avg": {
+    "precision": 0.9871244635193133,
+    "recall": 0.9787234042553191,
+    "f1-score": 0.982905982905983,
+    "support": 235
+  },
+  "macro avg": {
+    "precision": 0.990625,
+    "recall": 0.9795081967213115,
+    "f1-score": 0.984539169252545,
+    "support": 235
+  },
+  "weighted avg": {
+    "precision": 0.9877127659574468,
+    "recall": 0.9787234042553191,
+    "f1-score": 0.9826460630363598,
+    "support": 235
+  },
+  "accuracy": 0.9943181818181818
+}

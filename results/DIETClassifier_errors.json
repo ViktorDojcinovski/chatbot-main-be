@@ -1,0 +1,123 @@
+[
+  {
+    "text": "Ширината е 225, профилот 40 и дијаметарот е R15",
+    "entities": [
+      {
+        "start": 11,
+        "end": 14,
+        "value": "225",
+        "entity": "size"
+      },
+      {
+        "start": 25,
+        "end": 27,
+        "value": "40",
+        "entity": "size"
+      },
+      {
+        "start": 45,
+        "end": 47,
+        "value": "15",
+        "entity": "size"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "size",
+        "start": 11,
+        "end": 14,
+        "confidence_entity": 0.9621143937110901,
+        "value": "225",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "size",
+        "start": 25,
+        "end": 27,
+        "confidence_entity": 0.9526469707489014,
+        "value": "40",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "Sirinata e 225, profilot 40 i dijametarot e R15",
+    "entities": [
+      {
+        "start": 11,
+        "end": 14,
+        "value": "225",
+        "entity": "size"
+      },
+      {
+        "start": 25,
+        "end": 27,
+        "value": "40",
+        "entity": "size"
+      },
+      {
+        "start": 45,
+        "end": 47,
+        "value": "15",
+        "entity": "size"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "size",
+        "start": 11,
+        "end": 14,
+        "confidence_entity": 0.9604406952857971,
+        "value": "225",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "size",
+        "start": 25,
+        "end": 27,
+        "confidence_entity": 0.9502925872802734,
+        "value": "40",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "please tell me how much are your preformace 223 35 17",
+    "entities": [
+      {
+        "start": 33,
+        "end": 43,
+        "value": "preformace",
+        "entity": "type"
+      },
+      {
+        "start": 44,
+        "end": 53,
+        "value": "223 35 17",
+        "entity": "size"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "type",
+        "start": 33,
+        "end": 53,
+        "confidence_entity": 0.8545808792114258,
+        "value": "preformace 223 35 17",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  }
+]

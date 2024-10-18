@@ -1,0 +1,17 @@
+.git/
+venv/
+models/
+.rasa/cache/
+node_modules/
+*.pyc
+__pycache__/
+*.pyo
+*.pyd
+*.so
+*.egg-info/
+*.log
+*.DS_Store
+venv/
+venv2/
+tests/
+results/
