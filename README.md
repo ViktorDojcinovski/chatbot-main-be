@@ -2,15 +2,15 @@
 
 After installing dependencies. Run the following commands:
 
-To train the bot run, to create trained model:
+To train the bot and to create trained model run:
 
 - rasa train
 
-  To start the rasa server:
+To start the rasa server:
 
 - rasa run --enable-api --cors "\*"
 
-  To start the actions server:
+To start the actions server:
 
 - rasa run actions
 
